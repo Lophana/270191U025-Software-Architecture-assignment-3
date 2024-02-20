@@ -7,13 +7,12 @@
 
 TEST_CASE("TemplateCalculator")
 {
-    // replace below with concrete logger
-    DummyLogger logger;
+    FileLogger logger("log.txt");
 
     SECTION("integers")
     {
-
         TemplateCalculator<int> calc(&logger);
+
         SECTION("sum int")
         {
             for (int i = 0; i < 10; i++)
@@ -27,7 +26,6 @@ TEST_CASE("TemplateCalculator")
 
         SECTION("multiply int")
         {
-
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)
@@ -37,13 +35,13 @@ TEST_CASE("TemplateCalculator")
             }
         }
     }
+
     SECTION("floats")
     {
         TemplateCalculator<float> calc(&logger);
 
         SECTION("sum")
         {
-
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)
@@ -55,7 +53,6 @@ TEST_CASE("TemplateCalculator")
 
         SECTION("multiply")
         {
-
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)

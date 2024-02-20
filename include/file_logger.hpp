@@ -16,3 +16,4 @@ public:
 private:
     std::ofstream logfile;
 };
+
